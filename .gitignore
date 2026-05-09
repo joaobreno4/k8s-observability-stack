@@ -1,0 +1,17 @@
+# Binarios e instaladores
+*.deb
+*.exe
+*.msi
+
+# Dados de Banco de Dados e Logs
+mysql_data/
+*.log
+
+# Dependencias de Node
+node_modules/
+.npm/
+
+# Arquivos de sistema e IDE
+.DS_Store
+.vscode/
+.idea/
