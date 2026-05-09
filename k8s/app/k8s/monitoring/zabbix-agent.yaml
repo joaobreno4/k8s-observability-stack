@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: zabbix-agent-final
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      name: zabbix-agent
+  template:
+    metadata:
+      labels:
+        name: zabbix-agent
+    spec:
+      containers:
+      - name: zabbix-agent
+        image: zabbix/zabbix-agent:latest
+        ports:
+        - containerPort: 10050
+        env:
+        - name: ZBX_SERVER_HOST
+          value: "192.168.49.1"
+        - name: ZBX_HOSTNAME
+          value: "Zabbix server"
