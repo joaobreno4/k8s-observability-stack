@@ -15,3 +15,5 @@ node_modules/
 .DS_Store
 .vscode/
 .idea/
+
+zabbix-server/mysql_data/
